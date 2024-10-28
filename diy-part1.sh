@@ -68,17 +68,17 @@ echo '=========Replace k3screen drive plug OK!========='
 # sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 # echo '=========Add kenzok8 source OK!========='
 
- echo '添加MosDNS'
- rm -rf feeds/packages/net/v2ray-geodata
- rm -rf feeds/haiibo/luci-app-mosdns
- rm -rf feeds/haiibo/mosdns
- rm -rf package/feeds/haiibo/luci-app-mosdns
- rm -rf package/feeds/haiibo/mosdns
- find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
- find ./ | grep Makefile | grep mosdns | xargs rm -f
- git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
- git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
- echo '=========Add MosDNS OK!========='
+# echo '添加MosDNS'
+# rm -rf feeds/packages/net/v2ray-geodata
+# rm -rf feeds/haiibo/luci-app-mosdns
+# rm -rf feeds/haiibo/mosdns
+# rm -rf package/feeds/haiibo/luci-app-mosdns
+# rm -rf package/feeds/haiibo/mosdns
+# find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+# find ./ | grep Makefile | grep mosdns | xargs rm -f
+# git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+# git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+# echo '=========Add MosDNS OK!========='
 
 echo '移除bcm53xx中的其他机型'
 sed -i '421,453d' target/linux/bcm53xx/image/Makefile
